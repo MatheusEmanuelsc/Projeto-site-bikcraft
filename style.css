@@ -1,115 +1,179 @@
+/* configurações gerais */
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    margin-top: 4rem;
-    background-color: #f7f7f7;
+    background: #f7f7f7;
     display: grid;
     justify-items: center;
-    gap: 4rem;
+    gap:1.25rem;
+    margin-top: 2rem;
+    font-size:1.25rem ;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 a{
     text-decoration: none;
-}
-
-img{
-    max-width: 100%;
-}
-p , h1,h2,h3{
-    margin: 0px;
-}
-
-p{
-    font-size: 1.25rem;
-    line-height: 1.3;
-}
-
-.menu{
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-
-.menu a{
-    background-color: white;
-    padding: 1rem 2rem;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem;
     text-transform: uppercase;
-    color: black;
-    
 }
 
-.principal{
+
+
+/* navegação */
+header{
+    margin-bottom: 3rem;
+}
+header img{
+    display: block;
+    margin: 3rem auto;
+}
+nav ul{
+    display: flex;
+    gap:1.25rem;
+
+
+}
+
+li a{
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    color: black;
+    background-color: white;
+}
+
+li a:hover{
+    background-color: black;
+    color: white;
+    font-size: 1.7rem;
+    border: 0.2rem solid red;
+}
+
+li a:focus{
+    border: 0.2rem solid red;
+}
+
+li a:active{
+    border:0.2rem solid yellow ;
+}
+
+
+/* Conteúdo principal */
+main{
+    width: 62.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
 }
+
 
 .sobre{
+    display: grid;
+    align-items: center;
+    justify-items: end;
     background-color: white;
     padding: 2rem;
-    text-align: right;
     position: relative;
-    display: grid;
-    align-content: center;
-    justify-items: end;
-    gap: 1.25rem;
+
+}
+h1{
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
-.botao{
-    background-color: #ee221e;
-    text-transform: uppercase;
+h1::after{
+    content:"";
+    display: block;
+    width: 4rem;
+    background-color: #e21;
+    height: 0.25rem;
+    position: absolute;
+    top: 1.7rem;
+    left: 29.2rem;
+
+    
+}
+.sobre p{
+    text-align: end;
+    font-size: 1.4rem;
+}
+.sobre a{
     color: white;
+    background-color: #e21;
+    padding: 0.7rem 1.4rem;
+}
+.foto{
+    width: 100%;
+}
+.vant{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.vantagens{
+
+    
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 4rem;
+    text-align: end;
     padding: 1rem 2rem;
-    border-radius: 0.3rem;
+    color: rgba(0, 0, 0, 0.2);
+
+}
+h2{
+    background-image: url(img/onda.svg);
+}
+
+.carac{
+    background-color: white;
+    padding: 2rem 4rem;
+    position: relative;
+}
+
+.carac article{
+    margin-bottom: 1.5rem;
+    padding: 1rem 2rem;
+}
+.carac h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    
+    
+
+}
+
+#last{
+    margin-bottom: 0;
+}
+
+
+.mot::before{
+    content: url(img/eletrica.svg);
+    position: absolute;
+    left:3rem ;
+}
+
+.vel::before{
+    content: url(img/velocidade.svg);
+    position: absolute;
+    left:3rem ;
+}
+
+.rast::before{
+    content: url(img/rastreador.svg);
+    position: absolute;
+    left:3rem ;
+}
+
+
+
+/* rodape */
+footer{
+    width:100%;
+    background-color: white;
+    text-align: center;
     
 }
 
-span{
-    width: 4rem;
-    height: 0.3rem;
-    display: inline-block;
-    position: absolute;
-    top: 2rem ;
-    right:-2rem;
-    background-color: #ee221e;
-}
-
-
-.subtitulo{
-    font-size: 4rem;
-    text-transform: uppercase;
-    color: rgba(0, 0,0, 0.2);;
-    padding: 2.5rem;
-    text-align: right;
-    align-self: center;
-}
-
-.vantagens{
-    background-color: white;
-    padding: 2.5rem;
-
-}
-
-.vantagens-item{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.7rem 1.25rem;
-    margin-bottom: 1.25rem;
-
-}
-
-
-.vantagens-item p{
-    grid-column: 2;
-}
-
-.rodape{
-    background-color: white;
-    text-align: center;
-    width: 100%;
-    padding: 2.5rem;
-    box-sizing: border-box;
+footer p{
+    padding: 3rem 1rem;
 }
